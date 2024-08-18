@@ -1,0 +1,172 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: rgb(0, 0, 0);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 100vh;
+	margin:auto;
+	font-family: "Great Vibes", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+li{
+	list-style: none;
+}
+.logo{
+	position:relative ;
+	top: 10%;
+	left: 3%;
+	z-index: 999;
+}
+.logo:hover{
+	size: 120%;
+}
+nav{
+	justify-content: space-around;
+	position: fixed;
+	display: flex;
+    align-items: center;
+	min-width: 100%;
+	top: 0;
+	min-height: 8vh;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(5px);
+	z-index: 9;
+    font-weight: 600;
+}
+.sidebar{
+	position: fixed;
+	margin-top: 0px;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 40%;
+	z-index: 10;
+	background-color: rgba(140, 140, 140);
+	backdrop-filter: blur(10px);
+	backface-visibility: hidden;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+	display: none;
+}
+
+.sidebar li{
+	width: 100%;
+	height: 15%;
+}
+.sidebar a{
+	width: 100%;
+}
+ul{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 110%;
+	
+}
+ul a{
+	display: flex;
+	align-items: left;
+	height: 100%;
+	padding: 30px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 30px;
+	
+}
+nav ul a:hover{
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 31px;
+}
+
+.logoSide{
+	display: none;
+	z-index: 11;
+	
+}
+.tab{
+	display: none;
+}
+.chemin{
+    display: flex;
+    margin-top: 200px;
+	margin-left: 10px;
+    justify-content: flex-start;
+}
+.chemin a{
+    margin-right: 5px;
+    margin-left:5px ;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.chemin a:hover{
+    font-size: 105%;
+}
+.chemin div{
+    margin-right: 5px;
+    margin-left:5px ;
+    text-decoration: none;
+    color: grey;
+}
+svg{
+	height: 36px;
+	width: 42px;
+	fill: white;
+	transition:  0.2s;
+}
+svg:hover{
+	cursor: pointer;
+	height: 38px;
+	width: 44px;
+	fill: white;
+}
+
+@media screen and (max-width:950px){
+	.hideMobile{
+		display: none;
+		position: absolute;
+		right: 0px;
+		transform: translateX(100%);
+	}
+	ul{
+		justify-content: space-between;
+	}
+	.logoSide{
+		margin-top: 100px;
+		display: flex;
+		z-index: 11;
+	}
+	.logo{
+		display: none;
+	}
+	.tab{
+		display: flex;
+	}
+	.hideOnMobile{
+		display: none;
+	}
+	
+}
+@media screen and (max-width:675px){
+	.sidebar{
+		width: 100%;
+	}
+	ul{
+		justify-content: space-between;
+	}
+	.logoSide{
+		display: flex;
+		z-index: 11;
+	}
+	.logo{
+		display: none;
+	}
+}
